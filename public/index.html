@@ -263,15 +263,26 @@
   firebase.initializeApp(config);
   // Get a reference for the database service
   var database = firebase.databaseURL;
+  var messages_ref = firebase.database().ref().child('messages');
+  function submitForm() {
+    var name_text = document.getElementById("name_field").value;
+    var email_text = document.getElementById("email_field").value;
+    var message_text = document.getElementById("message_field").value;
+
+    // window.alert("Hello " + name_text + " your email is: " + email_text + " and your message is: " + message_text);
+
+    var result = messages_ref.push({
+      name: name_text,
+      email: email_text,
+      message: message_text
+    });
+
+    window.alert("The result was " + result);
+    window.open("#home","_self")
+}
 </script>
 
 <script>
-function submitForm() {
-  var name_text = document.getElementById("name_field").value;
-  var email_text = document.getElementById("email_field").value;
-  var message_text = document.getElementById("message_field").value;
-  window.alert("Hello " + name_text + " your email is: " + email_text + " and your message is: " + message_text);
-}
 
 // Add Google Maps
 function myMap()

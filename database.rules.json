@@ -1,6 +1,11 @@
 {
   "rules": {
-    ".read": true,
-    ".write": false
+    "messages": {
+      "$uid": {
+        ".read": false,
+        ".write": true,
+        ".validate": "newData.hasChildren(['name', 'email', 'message'])"
+      }
+    }
   }
 }

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Blau Magier</title>
+  <title>Blau Magier — Simply Zen</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-itunes-app" content="app-id=1235806103"/>
-  <meta name="description" content="Welcome to the homepage of Blau Magier.  I am a freelance iOS developer, and this page contains support for my apps, info on how to hire me on UpWork, and my blog on iOS Development.">
+  <meta name="description" content="Welcome to the homepage of Simply Zen Guided Meditation.  This page provides an app overview, tutorials, and guides.">
 
   <!-- Style Sheets CSS Links -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,13 +33,13 @@
 
   /* First image (Logo. Full height) */
   .bgimg-1 {
-      background-image: url('images/blue_magic_background.jpeg');
+      background-image: url('images/simply_zen_guided_meditation_web_logo.png');
       min-height: 100%;
   }
 
   /* Second image (Portfolio) */
   .bgimg-2 {
-      background-image: url("images/zoomed_into_code.jpeg");
+      background-image: url("images/getting_started_with_simply_zen.jpeg");
       min-height: 600px;
   }
 
@@ -69,8 +69,6 @@
 
     gtag('config', 'UA-91010095-1');
   </script>
-
-
 </head>
 
 <!-- Body Begins -->
@@ -81,9 +79,9 @@
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
-    <a href="#home" class="w3-bar-item w3-button w3-blue-grey">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-blue-grey">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-info"></i> DESCRIPTION</a>
+    <a href="#getting_started" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-gears"></i> GETTING STARTED</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="https://blog.blaumagier.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper-o"></i> BLOG</a>
     <!--a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"
@@ -93,8 +91,8 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">DESCRIPTION</a>
+    <a href="#getting_started" class="w3-bar-item w3-button" onclick="toggleFunction()">GETTING STARTED</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
     <a href="https://www.blaumagier.com" class="w3-bar-item w3-button" onclick="toggleFunction()">BLOG</a>
     <!--a href="#" class="w3-bar-item w3-button">SEARCH</a-->
@@ -104,81 +102,67 @@
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SOFTWARE <span class="w3-hide-small">THAT'S</span> MAGIC</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SIMPLY <span class="w3-hide-small"></span> ZEN</span>
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love to code</em></p>
-  <p>I am a freelance mobile software developer who specializes in using Swift to create iOS, WatchOS, TvOS, and MacOS apps.  Hire me to build your next great idea today!</p>
+<!-- Container (App Description Section) -->
+<div class="w3-content w3-container w3-padding-64" id="description">
+  <h3 class="w3-center">DESCRIPTION</h3>
+  <p class="w3-center"><em>Learn to Meditate</em></p>
+  <p>Simply Zen is an elegant, content rich mindfulness app that was developed for people who want to learn how to mediate and enjoy the benefits that a mindfulness practice can bring.</p>
+  <p>I created Simply Zen: Guided Meditaion to make learning to meditate affordable to anyone with an iPhone.  Most of the apps on the app store either didn't meet my needs, or charged a hundred dollars per year in subscription fees.  Simply Zen doesn't work like that.  You pay once, and it's yours for life.
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>Daniel Pratt</b></p><br>
-      <img src="images/daniel.png" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Blau Magier Freelance iOS Developer" width="372" height="384">
+      <p><b>Meditation Screen</b></p><br>
+      <img src="images/simpy_zen_meditation_screen.png" class="w3-round w3-image" alt="Screenshot of Meditation Screen in Simply Zen" width="338" height="600">
     </div>
 
     <!-- Hide this text on small devices -->
     <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am a freelance iOS developer, who is obsessed with writing elegant, clean code.  My passion is for learning, and I consider my day wasted if I haven't learned something new.</p>
-      <p>My most recent app is Simply Zen, a guided meditation app that is designed to be simple, calming, and best of all an inexpensive way for people to learn how to meditate.  I started writing it after I got into meditation, because all of the good apps that were available on the market also cost $100 dollars per year.  Simply Zen costs $5.99, and you only have to pay once.  For the price of a latte, you can change your life by learning to practice meditation.</p>
-      <p>This site contains tutorials and guides for my released apps, showcases some of my accomplishments, and hosts my blog.  I hope you enjoy your visit today, and hope to see you again soon!</p>
-      <p>Daniel Pratt - Blau Magier</p>
+      <p><h4><span>Features of Simply Zen:</span></h4></p>
+      <ul>
+        <li>Animated Menus</li>
+        <li>Guided meditation courses</li>
+        <li>Guided meditations for your moods</li>
+        <li>Open ended meditations with bells to keep you present, or without any sound at all</li>
+        <li>Customizable bell sounds with five bells to choose from</li>
+        <li>HealthKit integration</li>
+        <li>Inspirational quotes at the end of your session</li>
+        <li>Awe inspiring images that are displayed with the quote</li>
+        <li>Twitter support that allows you to tweet out the quotes you love</li>
+        <li>Get back to your favorite place, or where you left off with 3D touch shortcuts</li>
+    </ul>
+    <br>
+    <p><h4><span>Upcoming and Planned Features:</span></h4></p>
+    <ul>
+        <li>Streaks to help keep you on track</li>
+        <li>Achievements</li>
+        <li>Tibetan Buddhist Guided Course</li>
+        <li>Relaxing background sounds and music that you can turn on while you meditate</li>
+        <li>Contact me to get your feature on the upcoming features list</li>
+    </ul>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide"><i class="fa fa-keyboard-o"></i>Swift</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:100%">100%</div>
-  </div>
-    <p class="w3-wide"><i class="fa fa-photo"></i>Sketch</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:50%">50%</div>
-  </div>
 
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">3+</span><br>
-    Apps
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">5+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">30+</span><br>
-    Happy Customers
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">5000+</span><br>
-    Downloads
-  </div>
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">GETTING STARTED</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
+<div class="w3-content w3-container w3-padding-64" id="getting_started">
+  <h3 class="w3-center">SETTING UP FOR THE FIRST TIME</h3>
   <p class="w3-center"><em>Here are some of my latest app projcts.<br> Click on the images to learn more</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
       <img src="images/simply_zen.png" style="width:100%" onclick="location.href='https://blog.blaumagier.com/p/simply-zen.html';" class="w3-hover-opacity" alt="Simply Zen">
-      <p>Simply Zen</p>
     </div>
 
     <div class="w3-col m3">
@@ -188,12 +172,10 @@
 
     <div class="w3-col m3">
       <img src="images/blue_tip_calculator.jpeg" style="width:100%" onclick="location.href='https://blog.blaumagier.com/p/blue-tip-calculator.html';" class="w3-hover-opacity" alt="Blue Tip Calculator">
-      <p>Blue Tip Calculator</p>
     </div>
 
     <div class="w3-col m3">
       <img src="images/virtual_tourist.png" style="width:100%" onclick="location.href='https://github.com/danpratt/Virtual-Tourist';" class="w3-hover-opacity" alt="Virtual Tourist">
-      <p>Virtual Tourist</p>
     </div>
   </div>
 </div>
@@ -302,31 +284,6 @@
 
 <script>
 
-// Add Google Maps
-function myMap()
-{
-  myCenter=new google.maps.LatLng(48.988552, -122.749748);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
-
-  var marker = new google.maps.Marker({
-    position: myCenter,
-  });
-  marker.setMap(map);
-}
-
-// // Modal Image Gallery
-// function onClick(element) {
-//   document.getElementById("img01").src = element.src;
-//   document.getElementById("modal01").style.display = "block";
-//   var captionText = document.getElementById("caption");
-//   captionText.innerHTML = element.alt;
-// }
-
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -348,10 +305,5 @@ function toggleFunction() {
     }
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoTJaVQHW_PoVAivk9Xgp_YmDLfOwFaFU&callback=myMap"></script>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
 </body>
 </html>

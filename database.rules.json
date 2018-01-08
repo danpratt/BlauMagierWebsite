@@ -6,6 +6,13 @@
         ".write": true,
         ".validate": "newData.hasChildren(['name', 'email', 'message'])"
       }
+    },
+    "support": {
+      "$uid": {
+        ".read": false,
+        ".write": true,
+        ".validate": "newData.hasChildren(['name', 'email', 'message'])"
+      }
     }
   }
 }

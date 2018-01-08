@@ -22,7 +22,7 @@ const mailTransport = nodemailer.createTransport({
 });
 
 // Sends an email confirmation when a user changes his mailing list subscription.
-exports.sendEmailConfirmation = functions.database.ref('/messages/{uid}').onWrite(event => {
+exports.sendMessageEmailConfirmation = functions.database.ref('/messages/{uid}').onWrite(event => {
   const snapshot = event.data;
   const val = snapshot.val();
 
@@ -39,6 +39,31 @@ exports.sendEmailConfirmation = functions.database.ref('/messages/{uid}').onWrit
   
   // Building Email message.
   mailOptions.subject = 'New Message on Firebase';
+  mailOptions.text = message_to_send;
+  
+  return mailTransport.sendMail(mailOptions)
+    .then(() => console.log(`New message from: `, val.email))
+    .catch(error => console.error('There was an error while sending the email:', error));
+});
+
+// Sends an email confirmation when a user changes his mailing list subscription.
+exports.sendSupportEmailConfirmation = functions.database.ref('/support/{uid}').onWrite(event => {
+  const snapshot = event.data;
+  const val = snapshot.val();
+
+  const name = val.name;
+  const message = val.message;
+  const email = val.email;
+
+  const message_to_send = 'Hi Daniel,\n\nYou have a message from: ' + name + '\nemail: ' + email + '\nmessage: ' + message;
+
+  const mailOptions = {
+    from: '"Firebase Realtime Database for Blau Magier" <noreply@firebase.com>',
+    to: 'daniel@blaumagier.com'
+  };
+  
+  // Building Email message.
+  mailOptions.subject = 'New Support Message on Firebase';
   mailOptions.text = message_to_send;
   
   return mailTransport.sendMail(mailOptions)

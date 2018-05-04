@@ -71,7 +71,7 @@
   </script>
 
   <!-- Script for Bing Maps -->
-  <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+<script charset="UTF-8" type="text/javascript" src="https://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0&s=1"></script>
 
 </head>
 
@@ -329,7 +329,7 @@ function getMap()
   var pushpin = new Microsoft.Maps.Pushpin(bingMap.getCenter(),
   { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
     anchor: new Microsoft.Maps.Point(12, 39) });
-  bingMap.entities.push(pushpin);
+    bingMap.entities.push(pushpin);
 }
 
 // Add Google Maps

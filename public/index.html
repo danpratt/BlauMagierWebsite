@@ -70,11 +70,13 @@
     gtag('config', 'UA-91010095-1');
   </script>
 
+  <!-- Script for Bing Maps -->
+  <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
 
 </head>
 
 <!-- Body Begins -->
-<body>
+<body onLoad="getMap();">
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-black" id="myNavbar">
@@ -227,11 +229,13 @@
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <!-- Add Google Maps -->
-      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+      <!-- <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div> -->
+      <!-- Add Bing Map -->
+      <div id='bingMap' class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Blaine, US<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Madawaska, ME<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: <a href="mailto:daniel@blaumagier.com?subject=Just Wanted to Say Hello">daniel@blaumagier.com</a><br>
       </div>
       <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
@@ -306,22 +310,44 @@
 
 <script>
 
-// Add Google Maps
-function myMap()
-{
-  myCenter=new google.maps.LatLng(48.988552, -122.749748);
-  var mapOptions= {
-    center:myCenter,
-    zoom:12, scrollwheel: false, draggable: false,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+// Add Bing maps
 
-  var marker = new google.maps.Marker({
-    position: myCenter,
+function getMap()
+{
+  var bingMap = new Microsoft.Maps.Map(document.getElementById('bingMap'), {
+    credentials: 'AtmmmyNHaFRgK5gCUzmXORZ-RBth-zynDfSY3Fe_gmh1v-_bQq3xw2P0jQ8hITHt',
+    center: new Microsoft.Maps.Location(47.355315, -68.321703),
+    mapTypeId: Microsoft.Maps.MapTypeId.road,
+    zoom: 14,
+    showMapTypeSelector: false,
+	  showScalebar: false,
+	  showZoomButtons: false,
+	  showLocateMeButton: false,
+	  disableZooming: true,
+    disablePanning: true
   });
-  marker.setMap(map);
+  var pushpin = new Microsoft.Maps.Pushpin(bingMap.getCenter(),
+  { icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png',
+    anchor: new Microsoft.Maps.Point(12, 39) });
+  bingMap.entities.push(pushpin);
 }
+
+// Add Google Maps
+// function myMap()
+// {
+//   myCenter=new google.maps.LatLng(48.988552, -122.749748);
+//   var mapOptions= {
+//     center:myCenter,
+//     zoom:12, scrollwheel: false, draggable: false,
+//     mapTypeId:google.maps.MapTypeId.ROADMAP
+//   };
+//   var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+//
+//   var marker = new google.maps.Marker({
+//     position: myCenter,
+//   });
+//   marker.setMap(map);
+// }
 
 // // Modal Image Gallery
 // function onClick(element) {
@@ -354,7 +380,7 @@ function toggleFunction() {
     }
 }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoTJaVQHW_PoVAivk9Xgp_YmDLfOwFaFU&callback=myMap"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoTJaVQHW_PoVAivk9Xgp_YmDLfOwFaFU&callback=myMap"></script> -->
 <!--
 To use this code on your website, get a free API key from Google.
 Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
